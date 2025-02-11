@@ -1,0 +1,103 @@
+:root {
+    --azul-escuro: #353ba7;
+    --branco-suave: #f8f9fe;
+    --azul-medio: #2d4286;
+    --azul-claro: #698ae8;
+    --azul-claro-suave: #e1e7f6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--branco-suave);
+    color: var(--azul-escuro);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Barra azul do topo */
+.top-bar {
+    background-color: var(--azul-escuro);
+    width: 100%;
+    height: 80px; /* Aumentei a altura da barra */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Introdução {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-top: 100px; /* Reduzi a margem superior */
+    max-width: 800px; /* Limite de largura para o texto */
+    padding: 0 20px;
+}
+
+.Introdução h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px; /* Diminui a margem inferior entre o título e o texto */
+    color: var(--azul-escuro); /* Cor para o título */
+}
+
+.top-bar h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Espaço entre as caixas */
+    align-items: stretch; /* Faz as caixas ficarem com a mesma altura */
+    gap: 30px; /* Espaço entre os quadrados */
+    margin-top: 40px; /* Ajusta a margem entre a introdução e o container */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+/* Estilização dos quadrados */
+.box {
+    background-color: var(--azul-claro); /* Cor azul */
+    flex: 1; /* Faz as caixas ocuparem espaço igual */
+    height: 300px; /* Define uma altura mínima para as caixas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    text-decoration: none; /* Remove sublinhado dos links */
+    padding: 20px;
+    text-align: center;
+    max-width: 450px; /* Define um limite de tamanho */
+}
+
+
+.box:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.box h2 {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+}
+
+.box p {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
