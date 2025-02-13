@@ -1,103 +1,222 @@
 :root {
-    --azul-escuro: #353ba7;
-    --branco-suave: #f8f9fe;
-    --azul-medio: #2d4286;
-    --azul-claro: #698ae8;
-    --azul-claro-suave: #e1e7f6;
+    --cor1: #353ba7;
+    --cor2: #2d4286;
+    --cor3: #698ae8;
+    --cor4: #e1e7f6;
+    --cor5: #00183e;
+    --cor6: #001736;
+    --cor7: #ffc54a;
+    --cor8: #f8f9fe;
 }
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 90px;
     font-family: Arial, sans-serif;
-    background-color: var(--branco-suave);
-    color: var(--azul-escuro);
+    background-color: var(--cor8);
     display: flex;
-    text-align: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     overflow-y: auto;
 }
 
-/* Barra azul do topo */
 .top-bar {
-    background-color: var(--azul-escuro);
+    background-color: var(--cor1);
     width: 100%;
-    height: 80px; /* Aumentei a altura da barra */
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
 }
 
-.Introdução {
-    text-align: center;
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-top: 100px; /* Reduzi a margem superior */
-    max-width: 800px; /* Limite de largura para o texto */
-    padding: 0 20px;
-}
-
-.Introdução h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px; /* Diminui a margem inferior entre o título e o texto */
-    color: var(--azul-escuro); /* Cor para o título */
-}
-
 .top-bar h1 {
     color: white;
-    font-size: 24px;
+    font-size: 28px; /* Aumentei a fonte */
     margin: 0;
     padding: 0;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between; /* Espaço entre as caixas */
-    align-items: stretch; /* Faz as caixas ficarem com a mesma altura */
-    gap: 30px; /* Espaço entre os quadrados */
-    margin-top: 40px; /* Ajusta a margem entre a introdução e o container */
-    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+.intro {
+    margin-top: 30px; /* Mantém o espaço abaixo da barra */
+    max-width: 800px;
+    padding: 0 20px;
+    text-align: center;
 }
 
-/* Estilização dos quadrados */
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: var(--cor1);
+}
+
+.intro p {
+    font-size: 1.2em;
+    color: var(--cor1);
+    line-height: 1.6;
+    text-indent: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as caixinhas */
+    gap: 20px; /* Espaço entre as caixinhas */
+    margin-top: 50px;
+}
+
 .box {
-    background-color: var(--azul-claro); /* Cor azul */
-    flex: 1; /* Faz as caixas ocuparem espaço igual */
-    height: 300px; /* Define uma altura mínima para as caixas */
+    background-color: var(--cor3);
+    width: 200px; /* Tamanho fixo para todas as caixinhas */
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 10px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    text-decoration: none; /* Remove sublinhado dos links */
+    text-decoration: none; /* Remove o sublinhado */
     padding: 20px;
     text-align: center;
-    max-width: 450px; /* Define um limite de tamanho */
+    transition: transform 0.2s;
 }
 
-
 .box:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .box h2 {
     color: white;
-    font-size: 28px;
+    font-size: 20px;
     margin: 0;
 }
 
 .box p {
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 10px;
 }
 
+p, h1, h2, h3, ul {
+    text-align: left; /* Alinha os textos livres à esquerda */
+    max-width: 800px; /* Define um limite de largura para evitar que fiquem muito espalhados */
+    margin: 0 auto; /* Mantém centralizado dentro do próprio bloco */
+    padding: 0 20px; /* Pequeno espaçamento lateral */
+}
+
+.content-box {
+    background-color: var(--cor5); /* Cinza suave */
+    width: 800px;
+    height: 600px;
+    display: flex;
+    border: 2px solid var(--cor7);
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.content-box2 {
+    background-color: var(--cor5); /* Cinza suave */
+    width: 800px;
+    height: 350px;
+    display: flex;
+    border: 2px solid var(--cor7);
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    padding: 20px;
+}
+/* Menu lateral dentro do retângulo */
+.menu-side {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid var(--cor7);
+    padding-right: 20px;
+}
+
+.menu-side h2 {
+    color: var(--cor7);
+    margin-bottom: 15px;
+}
+
+.menu-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-button {
+    width: 90%;
+    padding: 10px;
+    background-color: var(--cor3);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.menu-button:hover {
+    background-color: var(--cor1);
+}
+
+/* Área de informações à direita */
+.info-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: var(--cor7);
+    font-size: 18px;
+    text-align: center;
+}
+
+.container-menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.menu-box-link {
+    background-color: var(--cor5);
+    width: 350px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--cor7);
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+    flex-direction: column;
+}
+
+.menu-box-link h2 {
+    color: var(--cor7);
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.menu-box-link:hover {
+    transform: scale(1.1);
+    background-color: var(--cor6);
+}
+
+.menu-box-link p {
+    text-align: justify;
+    color: var(--cor8);
+   
+}
