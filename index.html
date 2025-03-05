@@ -8,7 +8,18 @@
 </head>
 <body>
     <div class = "top-bar">
+        <a href="index.html" class="home-button">
+            <img src="./Fotos/whitehb.png" id="whitehb">
+        </a>
         <h1>Aprendendo mais sobre a guitarra</h1>
+        <div class="menu-container">
+            <button class="nav-button" onclick="toggleMenu()">☰</button>
+            <div class="menu-dropdown" id="menuDropdown">
+                <a href="index.html">Home</a>
+                <a href="tecnicas.html">Técnicas</a>
+                <a href="teoria.html">Teoria</a>
+            </div>
+        </div>
     </div>
 
     <div class="intro">
@@ -32,5 +43,23 @@
         </a>
     </div>
 </body>
-
+<script>
+    function toggleMenu() {
+        document.getElementById("menuDropdown").classList.toggle("show");
+    }
+    
+    // Fechar o menu se clicar fora dele
+    window.onclick = function(event) {
+        if (!event.target.matches('.nav-button')) {
+            var dropdowns = document.getElementsByClassName("menu-dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+    </script>
+    
 </html>

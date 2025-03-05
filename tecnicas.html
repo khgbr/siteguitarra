@@ -8,7 +8,19 @@
 </head>
 <body>
     <div class="top-bar">
+        <a href="index.html" class="home-button">
+            <img src="./Fotos/whitehb.png">
+        </a>
         <h1>Técnicas</h1>
+        <div class="menu-container">
+            <button class="nav-button" onclick="toggleMenu()">☰</button>
+            <div class="menu-dropdown" id="menuDropdown">
+                <a href="index.html">Home</a>
+                <a href="tecnicas.html">Técnicas</a>
+                <a href="teoria.html">Teoria</a>
+            </div>
+        </div>
+        
     </div>
     <div class="intro">
         <p>Como dito anteriormente, as técnicas são um dos melhores caminhos a se seguir se quiser ter uma evolução rápica e eficaz, não só na guitarra mas como em qualquer instrumento. </p>
@@ -22,23 +34,176 @@
         <div class="menu-side">
             <h2>Técnicas</h2>
             <div class="menu-box">
-                <button class="menu-button">Hammer-on</button>
-                <button class="menu-button">Pull-off</button>
-                <button class="menu-button">Slide</button>
-                <button class="menu-button">Abafamento com a mão esquerda</button>
-                <button class="menu-button">Palm mute</button>
-                <button class="menu-button">Fingerstyle</button>
-                <button class="menu-button">Bend</button>
-                <button class="menu-button">Vibrato</button>
-                <button class="menu-button">Tapping</button>
-                <button class="menu-button">Harmônicos naturais</button>
-                <button class="menu-button">Harmônicos artificiais</button>
+                <button onclick="selectTech(0)" class="menu-button">Hammer-on</button>
+                <button onclick="selectTech(1)" class="menu-button">Pull-off</button>
+                <button onclick="selectTech(2)" class="menu-button">Slide</button>
+                <button onclick="selectTech(3)" class="menu-button">Abafamento com a mão esquerda</button>
+                <button onclick="selectTech(4)" class="menu-button">Palm mute</button>
+                <button onclick="selectTech(5)" class="menu-button">Fingerstyle</button>
+                <button onclick="selectTech(6)" class="menu-button">Bend</button>
+                <button onclick="selectTech(7)" class="menu-button">Vibrato</button>
+                <button onclick="selectTech(8)" class="menu-button">Tapping</button>
+                <button onclick="selectTech(9)" class="menu-button">Harmônicos naturais</button>
+                <button onclick="selectTech(10)" class="menu-button">Harmônicos artificiais</button>
             </div>
         </div>
-        <div class="info-area">
-            <p>Selecione uma técnica no menu ao lado para ver explicações detalhadas e exemplos práticos.</p>
+        <div id="info-area">
+            <div class="tech-display">
+                <h2>Hammer-on</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KPjb8jPvJoY?si=3iafMsILrLh3SFFS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Consiste em tocar uma nota e, sem repalhetar, pressionar uma casa seguinte com outro dedo, produzindo um som suave e conectado. É muito usado para tocar frases rápidas e fluídas. Essa técnica é muita usada junto com o pull-off, e existem diversos exemplos de usos em músicas. Para realizar esta técnica basta pressionar a corda na casa que você quer tocar e o som sairá.</p>
+                <p>Alguns exemplos de músicas que você pode ver bem essa ténica são:</p>
+                    <ul>
+                        <li><a href="https://youtu.be/AKJYqvpb6Es?si=_06vU6_Og2k2duAf&t=223"target="_blank">Sweet Child O' Mine – Guns N' Roses</a></li>
+                        <li><a href="https://youtu.be/xx1SC-Jd_9w?si=RjXkI5BwT3P15BWA&t=1"target="_blank">Thunderstruck – AC/DC</a></li>
+                        <li><a href="https://youtu.be/SAH_e5paU2Q?si=yssWYXKdQNSUYiko&t=198"target="_blank">Iron Man – Black Sabbath</a></li>
+                    </ul>
+            </div>
+            
+            <div class="tech-display">
+                <h2>Pull-off</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-j313KibZJE?si=qQsUS6phLIAIMrUZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>O oposto do hammer-on. Aqui, uma nota é tocada e, ao retirar o dedo da corda de maneira controlada, permite-se que uma nota anterior soe. Junto com o hammer-on, forma a base do legato, deixando a execução mais fluida.</p>
+                <p>Alguns exemplos de músicas que você pode ver bem essa ténica são:</p>
+                <ul>
+                    <li><a href="https://youtu.be/e8RLDhmkPNA?si=6c6sqPlDaN6Tf1Tu"target="_blank">Hotel California – Eagles</a></li>
+                    <li><a href="https://youtu.be/TFfnNZbrckw?si=JRErlNbTTG6MzHpT&t=145"target="_blank">Wish You Were Here – Pink Floyd</a></li>
+                    <li><a href="https://youtu.be/Nz4hn1764kA?si=3J9_Rjaua_FPnxXN&t=109"target="_blank">Day Tripper – The Beatles</a></li>
+                </ul>
+            </div>
+
+            <div class="tech-display">
+                <h2>Slide</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0T-IjOyd80c?si=excyq1T3_Wz29EFF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Mover o dedo sobre a corda de uma casa para outra sem tirá-lo do braço da guitarra, criando uma transição suave entre as notas. É bastante usado em solos e frases melódicas.</p>
+                <p>Alguns exemplos de músicas que você pode ver bem essa ténica são:</p>
+                <ul>
+                    <li><a href="https://youtu.be/M_vThetQgTs?t=113"target="_blank">Litlle Sister - Queens of The Stone Age</a></li>
+                    <li><a href="https://youtu.be/QUd0lGyAZsY?t=9" target="_blank">I Sat By The Ocean - Queens of The Stone Age</a></li>
+                    <li><a href="https://youtu.be/NL-Inf0CvNw?t=167" target="_blank">Scar tissue – Red Hot Chili Peppers</a></li>
+                </ul>
+            </div>
+
+            <div class="tech-display">
+                <h2>Abafamento com a mão esquerda</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FuzI3Dd7RBU?si=vdYkmenGuUq_u4h8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Consiste em encostar levemente os dedos na corda sem pressioná-la completamente, gerando um som abafado ao tocar. Muito usado em ritmos de funk e rock para criar batidas rítmicas com as cordas. Esta técnica em si pode parecer algo simples, mas conforme vai sendo adicionada em ritmos mais complexos se torna algo mais dificil de se implementar, mas ela masterizada tras uma grande diferença no som final.</p>
+                <p>Alguns exemplos de músicas que você pode ver bem essa ténica são:</p>
+                <ul>
+                    <li><a href="https://youtu.be/Gw80pl7IFZ4?si=EpEMOjkJG4q2lhXk&t=77"target="_blank">Killing in the Name – Rage Against the Machine</a></li>
+                    <li><a href="https://youtu.be/HYg4OZVUbMQ?si=mnJqd4PYt0A1_zgN"target="_blank">Telecaster Stripes - Polkadot Stingray</a></li>
+                    <li><a href="https://youtu.be/GwJXI9xE7h8?si=1JEMScVtioPC4RzF&t=31"target="_blank">Can't Stop – Red Hot Chili Peppers</a></li>
+                </ul>
+            </div>
+
+            <div class="tech-display">
+                <h2>Palm mute</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/E3R_bjDj7wE?si=RMggu0Q7v0ENSej6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Feito ao encostar a parte lateral da mão direita sobre as cordas próximas à ponte, criando um som abafado. É muito usado no metal e punk para dar peso e controle ao som das notas.</p>
+                <p>Alguns exemplos de músicas que você pode ver bem essa ténica são:</p>
+                <ul>
+                    <li><a href="https://youtu.be/oPQfe6F9-p4?si=1rv-AgS5bBrSRCzn&t=24"target="_blank">Enter Sandman – Metallica</a></li>
+                    <li><a href="https://youtu.be/o7xjGSqhZVw?si=nZSPQjhQb2rRG4AA"target="_blank">All the Small Things – Blink-182</a></li>
+                    <li><a href="https://youtu.be/XbRIOEQOYiU?si=aUUysSvdazJ__MqQ&t=16"target="_blank">Unholy Confessions - Avenged Sevenfold</a></li>
+                </ul>
+            </div>
+
+            <div class="tech-display">
+                <h2>Fingerstyle</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/S3G0IiGKs0E?si=DYWy7kkmbR6Zkl99" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Técnica onde os dedos da mão direita tocam diretamente as cordas, sem o uso de palheta. Permite tocar melodias e acompanhamentos ao mesmo tempo, sendo comum em estilos como violão clássico, folk e blues.</p>
+                <p>Alguns exemplos de músicas que você pode ver bem essa ténica são:</p>
+                <ul>
+                    <li><a href="https://youtu.be/e2t1iNWyFao?si=s3puPJiHODl1kPL3"target="_blank">Buried Alive – Avenged Sevenfold</a></li>
+                    <li><a href="https://youtu.be/Y3WzbPyovbE?si=vZawPTKGWDZq-NJ9"target="_blank">Nothing Else Matters – Metallica</a></li>
+                    <li><a href="https://youtu.be/h-Wmi4kXFDM?si=1IzoYUTf3OTthgoI&t=16"target="_blank"></a>Sultans of Swing – Dire Straits</li>
+                </ul>
+            </div>
+
+            <div class="tech-display">
+                <h2>Bend</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UGss9rJ61T0?si=xrrMjiWDE49Xnked" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Técnica onde a corda é empurrada para cima ou para baixo para alterar a altura da nota, criando um efeito expressivo. É muito utilizado em solos de rock e blues.</p>
+                <p>Alguns exemplos de músicas que você pode ver bem essa ténica são:</p>
+                <ul>
+                    <li><a href="https://youtu.be/SV00WKHnLgE?si=sXNzVRU113fgyP7Q&t=176"target="_blank">The River – Parkway Drive</a></li>
+                    <li><a href="https://youtu.be/oPQfe6F9-p4?si=AoFfI0v_1dEtU9XH&t=159"target="_blank">Enter Sandman – Metallica</a></li>
+                    <li><a href="https://youtu.be/raZBLp4zowg?si=ARmtHboTLFoA06v-&t=296"target="_blank">Free Bird - Lynard Skynard</a></li>
+                </ul>
+            </div>
+
+            <div class="tech-display">
+                <h2>Vibrato</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KXjHYaFqsLo?si=Lthss-dvH0ypXlxX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Consiste em balançar levemente a nota ao movê-la para frente e para trás, criando uma oscilação de tom. Dá mais emoção e personalidade ao som, e também ela que faz o som menos "robótico", praticando esta técnica .</p>
+                <p>O vibrato não tem músicas específicas na qual você possa ensair essa técnica, o jeito mais fácil é sempre lembrar de fazer quando possível.</p>
+            </div>
+
+            <div class="tech-display">
+                <h2>Tapping</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/birY-hTOyFY?si=HUd3RDkNpB7NEsxo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>O tapping em teoria se assemelharia ao hammer-on mencionado mais cedo, a diferença sendo que ele é tocado com a mão direita, então você para de palhetar para poder tocar uma nota a mais, uma das ténicas mais legais da guitarra e que pode impressioanr muita gente.</p>
+                <p>Alguns exemplos de músicas que você pode ver bem essa ténica são:</p>
+                <ul>
+                    <li><a href="https://youtu.be/y_zpUFPiCGU?si=6zN3DDvb1OuvQ1NH&t=176"target="_blank">Crazy Train - Ozzy Osbourne</a></li>
+                    <li><a href="https://youtu.be/Ro2UCGvrn9o?si=5dudxWbIBboRCMHL"target="_blank">The Poison - Bullet For My Valentine</a></li>
+                    <li><a href="https://youtu.be/pGF-nprFOVU?si=6yeDg3YwmvsQ2kQu&t=22"target="_blank">Silvera - Gojira</a></li>
+                </ul>
+            </div>
+
+            <div class="tech-display">
+                <h2>Harmônicos naturais</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_ktD6VnsSOg?si=3f0Vz_I4wtJoEHxJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>São sons cristalinos gerados ao encostar levemente nas cordas da guitarra e palhetar as cordas, ele irá fazer um som diferente aonde não seria nem a corda completamente mutada e nem a nota normal da guitarra.</p>
+                <p>Alguns exemplos de músicas que você pode ver bem essa ténica são:</p>
+                <ul>
+                    <li><a href="https://youtu.be/4aU_IrGepfE?si=3gmXSBJgoVS6se8z&t=7"target="_blank">Smells Like Teen Spirit – Nirvana</a></li>
+                    <li><a href="https://youtu.be/97_Lht_Ksek?si=hc2F1hlRVchDxZSs&t=57"target="_blank">Tears Don't Fall - Bullet For My Valentine</a></li>
+                    <li><a href="https://youtu.be/gIh4utNt1Uw?si=O9Gk2u2jIr9BwDCV"target="_blank">The Middle – Jimmy Eat World</a></li>
+            </div>
+            <div class="tech-display">
+                <h2>Harmônicos artificiais</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/liZhop5ioEY?si=w5OdlPBNlP4FQVnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Criados ao tocar uma nota normalmente e, logo em seguida, encostar levemente o polegar ou outro dedo na corda ao mesmo tempo que se palheta. São muito usados para criar sons agudos e brilhantes, principalmente no rock e metal.</p>
+                <p>Alguns exemplos de músicas que você pode ver bem essa ténica são:</p>
+                <ul>
+                    <li><a href="https://youtu.be/HRHDt67jr5w?si=2ufKw1Dzn-FIM-x0&t=30"target="_blank">Duality – Slipknot</a></li>
+                    <li><a href="https://youtu.be/B2YBpnB9V5M?si=FdrRu6QT5_LhgBDM&t=33"target="_blank">4 Words (To Choke Upon) - Bullet For My Valentine</a></li>
+                    <li><a href="https://youtu.be/6DvBB62-bz4?si=7FrQSCGHEbNhZIH7&t=14"target="_blank"></a>Holy Diver - Killswitch Engage</li>
+            </div>
         </div>
     </div>
+</body>  
+<script>
     
+    var tech = document.querySelectorAll('.tech-display')
+    var techarea = document.querySelector('#info-area')
+    function hideAllTech() {
+		tech.forEach(element => {
+			element.style.display = "none";
+		});
+	}
+    
+    function selectTech(i){
+        hideAllTech()
+        techarea.children[i].style.display = 'flex'
+    }
+    selectTech(0)
+    function toggleMenu() {
+    document.getElementById("menuDropdown").classList.toggle("show");
+}
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.nav-button')) {
+            var dropdowns = document.getElementsByClassName("menu-dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
     
 </html>

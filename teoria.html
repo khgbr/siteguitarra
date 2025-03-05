@@ -8,32 +8,180 @@
 </head>
 <body>
     <div class="top-bar">
-    <h1>Teoria Musical</h1>
+        <a href="index.html" class="home-button">
+            <img src="./Fotos/whitehb.png">
+        </a>
+        <h1>Teoria Musical</h1>
+        <div class="menu-container">
+            <button class="nav-button" onclick="toggleMenu()">☰</button>
+            <div class="menu-dropdown" id="menuDropdown">
+                <a href="index.html">Home</a>
+                <a href="tecnicas.html">Técnicas</a>
+                <a href="teoria.html">Teoria</a>
+            </div>
+        </div>
+        
     </div>
     <div class="intro">
-    <p>Se você quiser entender o que realmente você está fazendo, aqui é o lugar certo, o estudo de técnicas e teoria musical de cada instrumento é essencial para que você possa dominar o instrumento.</p>
-    <p>Claro que se fosse para ensinar desde o começo seria algo muito longo e chato, então meu objetivo aqui é te mostrar apenas aonde ficam as notas da guitarra, como praticar usando escalas, e dicas sobre como enxergar o braço da guitarra.</p> <br><br>
-    
-    
-    <h2>Escalas Musicais</h2>
-    <p>Aqui você pode explorar diferentes tipos de escalas musicais.</p>
-
-    <div class="content-box2">
+        <p>Se você quiser entender o que realmente você está fazendo, aqui é o lugar certo, o estudo de técnicas e teoria musical de cada instrumento é essencial para que você possa dominar o instrumento.</p>
+        <p>Claro que se fosse para ensinar desde o começo seria algo muito longo e chato, então meu objetivo aqui é te mostrar apenas aonde ficam as notas da guitarra, como praticar usando escalas, e dicas sobre como enxergar o braço da guitarra.</p> <br><br>
+        <h2>Escalas Musicais</h2>
+        <p>Aqui você pode explorar diferentes tipos de escalas musicais.</p>
+    </div>
+    <div class="content-box">
         <div class="menu-side">
-            <h2>Opções</h2>
+            <h2>Escalas</h2>
             <div class="menu-box">
-                <button class="menu-button">Escala Pentatônica</button>
-                <button class="menu-button">Escala Diatônica</button>
-                <button class="menu-button">Escala Hexatônica</button>
-                <button class="menu-button">Escala Blues</button>
-                <button class="menu-button">Escala Bepop Pentatônica</button>
-                <button class="menu-button">Escala Hirajoshi</button>
+                <button onclick ="selectTheory(0)" class="menu-button">Escala Pentatônica</button>
+                <button onclick ="selectTheory(1)" class="menu-button">Escala Diatônica</button>
+                <button onclick ="selectTheory(2)" class="menu-button">Escala Hexatônica</button>
+                <button onclick ="selectTheory(3)" class="menu-button">Escala Blues</button>
+                <button onclick ="selectTheory(4)" class="menu-button">Escala Bepop Pentatônica</button>
+                <button onclick ="selectTheory(5)" class="menu-button">Escala Hirajoshi</button>
             </div>
         </div>
 
-        <div class="info-area">
-            <p>Selecione uma escala para ver mais detalhes.</p>
+        <div id="info-area">
+            <div class="tech-display">
+                <h2>Escala Pentatônica</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pI1YuJ-vljU?si=J_DZgoOzCsgJYTEm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>A escala pentatônica é uma simplificação da escala diatônica, onde são removidas duas notas que podem gerar dissonâncias mais fortes. Isso faz com que ela soe mais natural e melódica, tornando-a fácil de improvisar e aplicar em diversas progressões de acordes. <br>
+                    Existem duas formas principais da escala pentatônica: <br>
+                    
+                    Pentatônica Maior – Derivada da escala maior, com os graus: <br>
+                    1 - 2 - 3 - 5 - 6 <br>
+                    Pentatônica Menor – Derivada da escala menor, com os graus: <br>
+                    1 - ♭3 - 4 - 5 - ♭7 <br>
+                    Se pegarmos a escala pentatônica menor de A (Lá Menor), temos as notas: <br>
+                    A - C - D - E - G <br>
+                    Como pode ver, essas são as notas por que seguindo o conceito acima, são essas as notas numeradas na escala de lá no caso.</p>
+            </div>
+
+            <div class="tech-display">
+                <h2>Escala Diatônica</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/O6qAsXQ43OY?si=2b-muNaTCxFy8Deh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>A escala diatônica segue um padrão de intervalos fixo, baseado em tons (T) e semitons (S): <br>
+                    Fórmula da Escala Maior: <br>
+                    T – T – S – T – T – T – S <br>
+                    Fórmula da Escala Menor Natural: <br>
+                    T – S – T – T – S – T – T <br>
+                    Ou seja, a distribuição das notas na escala maior e menor segue esse padrão, o que define sua sonoridade. <br>
+                    Se pegarmos a escala diatônica de Dó Maior (C Maior), temos as seguintes notas: <br>
+                    C – D – E – F – G – A – B – (C novamente na oitava seguinte) <br>
+                    Essa é a única escala maior que não tem sustenidos (#) nem bemóis (♭). <br>
+                </p>
+            </div>
+
+            <div class="tech-display">
+                <h2>Escala Hexafônica</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nfIGgH0xzbQ?si=6781gxm64bjszH_V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>A escala hexatônica é uma escala composta por seis notas por oitava. Diferente da pentatônica (5 notas) e da diatônica (7 notas), a hexatônica pode ser formada de diversas maneiras, dependendo do estilo musical e do efeito desejado. Algumas das escalas hexatônicas mais usadas incluem a escala de tons inteiros, a hexatônica blues e a hexatônica maior/menor. <br>
+                A escala hexatônica não segue um único padrão fixo, pois existem diferentes variações com seis notas, dependendo da aplicação musical. As mais conhecidas são: <br>
+
+                Escala de Tons Inteiros <br>
+                Todas as notas estão separadas por um tom inteiro. <br>
+                <ul>
+                    <li>Exemplo em C: C – D – E – F# – G# – A#
+                    <li>Muito usada no jazz e fusão, além de ser comum em sons mais experimentais.
+                </ul>
+                Escala Hexatônica Blues <br>
+                
+                Baseada na pentatônica menor, adicionando a famosa blue note (♭5). <br>
+                <ul>
+                    <li>Exemplo em A: A – C – D – D# – E – G
+                    <li>Torna os solos mais expressivos e é essencial no blues, rock e metal.
+                </ul>
+                Escala Hexatônica Maior/Menor <br>
+                
+                Adiciona uma nota extra à escala pentatônica, geralmente um grau suspenso (2 ou 6).  <br>
+                <ul>
+                    <li>Exemplo em C Maior Hexatônica: C – D – E – G – A – B
+                    <li>Criando um som mais fluido e melódico, usada em fusion e progressivo.
+                </ul></p>
+            </div>
+
+            <div class="tech-display">
+                <h2>Escala Blues</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/il56C-J1qWY?si=ScdetdhVqy_t4--A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>A escala de blues é uma das escalas mais icônicas da música moderna, sendo amplamente usada no blues, rock, jazz e metal. Ela é uma variação da escala pentatônica menor, mas com um detalhe especial: a blue note (♭5 ou #4), que adiciona tensão e um som característico cheio de emoção. <br>
+                A escala de blues é uma pentatônica menor com uma nota extra que dá aquele som "chorado" e expressivo típico do blues. <br>
+                Fórmula da Escala de Blues: <br>
+                1 – ♭3 – 4 – ♭5 – 5 – ♭7 <br>
+                Ela mantém a simplicidade da pentatônica menor, mas adiciona um grau cromático (a blue note), que cria mais tensão e expressividade. <br>
+                Se pegarmos a escala de blues em A, teremos as notas: <br>
+                A – C – D – D# – E – G <br>
+                Aqui, a blue note (D#) está entre D e E, funcionando como um tom de passagem que pode ser enfatizado ou suavemente ligado às outras notas. <br>
+                Outra forma de visualizar: <br>
+                Escala Pentatônica Menor de A: A – C – D – E – G <br>
+                Escala de Blues de A: A – C – D – D# – E – G <br>
+                A nota D# (ou Eb) é a que dá a "cara" do blues! 🎵 <br>           
+                </p>
+            </div>
+
+            <div class="tech-display">
+                <h2>Escala Bepop Pentatônica</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/N3HJUQVwabI?si=GCxHivcJMUimQR8_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>A escala bebop pentatônica segue a estrutura da pentatônica tradicional, mas adiciona uma nota cromática para criar uma sonoridade mais "linear" e conectada. Essa nota extra preenche o espaço entre os intervalos maiores da pentatônica, facilitando a improvisação e tornando as frases mais naturais no swing do jazz. <br>
+                Existem duas versões principais: <br>
+                Bebop Pentatônica Maior <br>
+                Baseada na pentatônica maior, com uma nota extra entre o 5º e o 6º grau. <br>
+                Fórmula: 1 – 2 – 3 – ♯4 – 5 – 6 <br>
+                Exemplo em C Maior: C – D – E – F# – G – A <br>
+                Bebop Pentatônica Menor <br>
+                Baseada na pentatônica menor, adicionando uma nota entre o 4º e o 5º grau. <br>
+                Fórmula: 1 – ♭3 – 4 – ♯4 – 5 – ♭7 <br>
+                Exemplo em A Menor: A – C – D – D# – E – G <br>
+                A nota cromática extra (♯4 ou ♭5) adiciona uma leve tensão que pode ser usada para criar fraseados mais dinâmicos e expressivos. <br>
+                    
+                    </p>
+            </div>
+
+            <div class="tech-display">
+                <h2>Escala Hirajoshi</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Zuyue-r_LlI?si=pergeBdE8oomF9nx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>A Hirajōshi é pentatônica, mas diferente da pentatônica menor ou maior ocidental. Sua sonoridade vem do uso de intervalos incomuns, eliminando certos graus da escala diatônica e criando um som mais "aberto" e etéreo. <br>
+                Fórmula da Escala Hirajōshi: <br>
+                1 – 2 – ♭3 – 5 – ♭6 <br>
+                Se tocarmos essa escala em E, temos: <br>
+                E – F# – G – B – C <br>
+                Isso cria um som misterioso e modal, muito usado em música oriental, metal neoclássico e progressivo.<br>
+                
+            
+                </p>
+            </div>
         </div>
     </div>
 </body>
+<script>
+    
+    var theory = document.querySelectorAll('.tech-display')
+    var theoryarea = document.querySelector('#info-area')
+    function hideAllTheory() {
+		theory.forEach(element => {
+			element.style.display = "none";
+		});
+	}
+    
+    function selectTheory(i){
+        hideAllTheory()
+        theoryarea.children[i].style.display = 'flex'
+    }
+    selectTheory(0)
+    function toggleMenu() {
+    document.getElementById("menuDropdown").classList.toggle("show");
+}
+
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.nav-button')) {
+            var dropdowns = document.getElementsByClassName("menu-dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 </html>

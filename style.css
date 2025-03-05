@@ -11,7 +11,7 @@
 
 body {
     margin: 0;
-    padding: 90px;
+    padding: 0px;
     font-family: Arial, sans-serif;
     background-color: var(--cor8);
     display: flex;
@@ -25,14 +25,17 @@ body {
 .top-bar {
     background-color: var(--cor1);
     width: 100%;
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
+    padding: 0px;
+}
+
+.top-bar * {
+    margin: 0px 10px;
+
 }
 
 .top-bar h1 {
@@ -40,6 +43,66 @@ body {
     font-size: 28px; /* Aumentei a fonte */
     margin: 0;
     padding: 0;
+}
+
+
+.home-button img {
+    width: 40px;  /* Ajuste o tamanho do ícone */
+    height: auto;
+}
+
+
+/* Botão do menu (ícone ☰) */
+.nav-button {
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 9px;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-button:hover {
+    background-color: var(--cor3);
+}
+/* Dropdown do menu (inicialmente oculto) */
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--cor6); /* Cor escura para combinar */
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Links dentro do dropdown */
+.menu-dropdown a {
+    display: block;
+    color: var(--cor7);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+/* Efeito ao passar o mouse */
+.menu-dropdown a:hover {
+    background-color: #333;
+}
+
+/* Mostrar o menu quando ativo */
+.menu-dropdown.show {
+    display: block;
 }
 
 .intro {
@@ -102,37 +165,24 @@ body {
     margin-top: 10px;
 }
 
-p, h1, h2, h3, ul {
+p, h1, h2, h3 {
     text-align: left; /* Alinha os textos livres à esquerda */
-    max-width: 800px; /* Define um limite de largura para evitar que fiquem muito espalhados */
     margin: 0 auto; /* Mantém centralizado dentro do próprio bloco */
     padding: 0 20px; /* Pequeno espaçamento lateral */
 }
 
 .content-box {
     background-color: var(--cor5); /* Cinza suave */
-    width: 800px;
-    height: 600px;
+    min-width: 400px;
     display: flex;
     border: 2px solid var(--cor7);
     border-radius: 10px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 50px;
     padding: 20px;
+    max-width: 1000px;
 }
 
-.content-box2 {
-    background-color: var(--cor5); /* Cinza suave */
-    width: 800px;
-    height: 350px;
-    display: flex;
-    border: 2px solid var(--cor7);
-    border-radius: 10px;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 50px;
-    padding: 20px;
-}
-/* Menu lateral dentro do retângulo */
 .menu-side {
     width: 250px;
     display: flex;
@@ -171,11 +221,10 @@ p, h1, h2, h3, ul {
     background-color: var(--cor1);
 }
 
-/* Área de informações à direita */
-.info-area {
-    flex: 1;
+#info-area {
+    flex-direction: row;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 20px;
     color: var(--cor7);
@@ -219,4 +268,28 @@ p, h1, h2, h3, ul {
     text-align: justify;
     color: var(--cor8);
    
+}
+
+.tech-display {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    align-items: center;
+}
+
+.tech-display p, ul {
+    width: 100%;
+}
+
+.tech-display li {
+    margin: 5px 20px;
+}
+
+.tech-display ul {
+    margin: 0px;
+}
+
+.tech-display a {
+    color: var(--cor7);
 }
